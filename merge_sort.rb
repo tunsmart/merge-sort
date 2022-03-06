@@ -7,9 +7,7 @@ def merge(l,r)
         result << r.shift
      end
     end
-    result << l if !l.empty? && r.empty?
-    result << r if l.empty? && !r.empty?
-    result.flatten
+    result + l + r
   end
  
  def merge_sort(arr)
@@ -22,4 +20,4 @@ def merge(l,r)
      end
  end
  
- p merge_sort([1001,21,9,1000,2,1,5,200,10,11,8,3,6,4])
+ p merge_sort([1001,21,9,1000,2,1,5,200,7,10,11,8,3,6,4])
